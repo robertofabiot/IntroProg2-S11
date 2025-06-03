@@ -1,8 +1,14 @@
 #Calcular el area de un círculo
 """formula area = pi * (r*r)"""
 
-def calcular_area_circulo(radio):
-    return 3.1416 * radio * radio
+import math
 
-r = float(input("Ingrese el radio del círculo: "))
-print(f"El área del círculo es {calcular_area_circulo(r)} unidades cuadradas.")
+def calcular_area_circulo(radio):
+    return math.pi * radio ** 2
+
+def main():
+    radio = float(input("Ingrese el radio: "))
+    area = calcular_area_circulo(radio)
+    print(f"El area del círculo es {area:.2f} unidades cuadradas")
+
+main()
